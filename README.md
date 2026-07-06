@@ -1,4 +1,4 @@
-# RadioShift-SDR: A Tutorial on How to USRPs for Wireless Communications
+# RadioShift-SDR: A Tutorial on How to Use USRPs for Wireless Communications
 
 ## Overview 
 

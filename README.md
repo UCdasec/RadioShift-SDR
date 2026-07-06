@@ -4,6 +4,8 @@
 
 This repo contains code and tutorial documents for setting up two USRPs (one for transmitter and one for reciever) for basic wireless communications (e.g., FM and BPSK). 
 
+Details regarding how to run our code and setup the USRPs can be found in our tutorial document ./Tutorial_USRP_Setup_Instructions.pdf
+
 ## Reference
 We use the source code and documents of this repository to collect real-world RF signals, which are used in the following paper.  
 

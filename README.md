@@ -12,7 +12,7 @@ https://github.com/UCdasec/RadioShift (Simulated RF Signal Generation)
 
 https://github.com/UCdasec/RadioShift-SDR (Real-world RF Signal Generation)
 
-https://github.com/UCdasec/RadioFINN (Train and Test Neural Networks on FPGAs)
+https://github.com/UCdasec/RadioFINN ((Train Neural Networks on GPUs and Test Them on FPGAs)
 
 ## Reference
 We use the source code and documents of this repository to collect real-world RF signals, which are used in the following paper.  

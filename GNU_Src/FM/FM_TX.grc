@@ -22,7 +22,7 @@ options:
     run_options: prompt
     sizing_mode: fixed
     thread_safe_setters: ''
-    title: Not titled yet
+    title: FM_TX
     window_size: (1000,1000)
   states:
     bus_sink: false
@@ -94,7 +94,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [368, 128.0]
+    coordinate: [328, 128.0]
     rotation: 0
     state: true
 - name: audio_sink_0
@@ -113,8 +113,8 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [216, 304.0]
-    rotation: 0
+    coordinate: [104, 304.0]
+    rotation: 180
     state: enabled
 - name: blocks_wavfile_source_0
   id: blocks_wavfile_source
@@ -212,8 +212,8 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [576, 376.0]
-    rotation: 0
+    coordinate: [328, 344.0]
+    rotation: 180
     state: true
 - name: qtgui_time_sink_x_0
   id: qtgui_time_sink_x
@@ -309,8 +309,8 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [576, 280.0]
-    rotation: 0
+    coordinate: [528, 352.0]
+    rotation: 180
     state: true
 - name: uhd_usrp_sink_0
   id: uhd_usrp_sink
@@ -586,7 +586,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [816, 104.0]
+    coordinate: [680, 104.0]
     rotation: 0
     state: true
 

@@ -5,13 +5,14 @@
 # SPDX-License-Identifier: GPL-3.0
 #
 # GNU Radio Python Flow Graph
-# Title: Not titled yet
+# Title: FM_TX
 # Author: phu
 # GNU Radio version: 3.10.9.2
 
 from PyQt5 import Qt
 from gnuradio import qtgui
 from gnuradio import analog
+from gnuradio import audio
 from gnuradio import blocks
 from gnuradio import gr
 from gnuradio.filter import firdes
@@ -31,9 +32,9 @@ import sip
 class FM_TX(gr.top_block, Qt.QWidget):
 
     def __init__(self):
-        gr.top_block.__init__(self, "Not titled yet", catch_exceptions=True)
+        gr.top_block.__init__(self, "FM_TX", catch_exceptions=True)
         Qt.QWidget.__init__(self)
-        self.setWindowTitle("Not titled yet")
+        self.setWindowTitle("FM_TX")
         qtgui.util.check_set_qss()
         try:
             self.setWindowIcon(Qt.QIcon.fromTheme('gnuradio-grc'))
@@ -180,6 +181,7 @@ class FM_TX(gr.top_block, Qt.QWidget):
         self._qtgui_freq_sink_x_0_win = sip.wrapinstance(self.qtgui_freq_sink_x_0.qwidget(), Qt.QWidget)
         self.top_layout.addWidget(self._qtgui_freq_sink_x_0_win)
         self.blocks_wavfile_source_0 = blocks.wavfile_source('/home/phu/repos/RadioShiftSDR/pilot_speaking.mp3', True)
+        self.audio_sink_0 = audio.sink(audio_rate, '', True)
         self.analog_wfm_tx_0 = analog.wfm_tx(
         	audio_rate=audio_rate,
         	quad_rate=quad_rate,
@@ -196,6 +198,7 @@ class FM_TX(gr.top_block, Qt.QWidget):
         self.connect((self.analog_wfm_tx_0, 0), (self.qtgui_time_sink_x_0, 0))
         self.connect((self.analog_wfm_tx_0, 0), (self.uhd_usrp_sink_0, 0))
         self.connect((self.blocks_wavfile_source_0, 0), (self.analog_wfm_tx_0, 0))
+        self.connect((self.blocks_wavfile_source_0, 0), (self.audio_sink_0, 0))
 
 
     def closeEvent(self, event):

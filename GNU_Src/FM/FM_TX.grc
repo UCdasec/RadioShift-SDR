@@ -94,7 +94,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [328, 128.0]
+    coordinate: [280, 112.0]
     rotation: 0
     state: true
 - name: audio_sink_0
@@ -113,16 +113,16 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [104, 304.0]
+    coordinate: [56, 288.0]
     rotation: 180
-    state: enabled
+    state: disabled
 - name: blocks_wavfile_source_0
   id: blocks_wavfile_source
   parameters:
     affinity: ''
     alias: ''
     comment: "audio rate. \nCheck your audio file property"
-    file: /home/phu/repos/RadioShiftSDR/pilot_speaking.mp3
+    file: /home/phu/repos/RadioShiftSDR/local_sandbox/pilot_speaking.mp3
     maxoutbuf: '0'
     minoutbuf: '0'
     nchan: '1'
@@ -131,7 +131,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [64, 156.0]
+    coordinate: [16, 144.0]
     rotation: 0
     state: true
 - name: qtgui_freq_sink_x_0
@@ -212,7 +212,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [328, 344.0]
+    coordinate: [280, 328.0]
     rotation: 180
     state: true
 - name: qtgui_time_sink_x_0
@@ -309,8 +309,8 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [528, 352.0]
-    rotation: 180
+    coordinate: [568, 280.0]
+    rotation: 0
     state: true
 - name: uhd_usrp_sink_0
   id: uhd_usrp_sink
@@ -423,7 +423,7 @@ blocks:
     clock_source6: ''
     clock_source7: ''
     comment: ''
-    dev_addr: type=b200
+    dev_addr: serial=324DD14
     dev_args: ''
     gain0: '20'
     gain1: '0'
@@ -586,7 +586,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [680, 104.0]
+    coordinate: [592, 88.0]
     rotation: 0
     state: true
 

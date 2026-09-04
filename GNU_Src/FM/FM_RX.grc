@@ -28,7 +28,7 @@ options:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [328, 52.0]
+    coordinate: [40, 24.0]
     rotation: 0
     state: enabled
 
@@ -51,9 +51,21 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [664, 20.0]
+    coordinate: [360, 16.0]
     rotation: 0
-    state: true
+    state: enabled
+- name: freq
+  id: variable
+  parameters:
+    comment: ''
+    value: 915e6
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [520, 24.0]
+    rotation: 0
+    state: disabled
 - name: samp_rate
   id: variable
   parameters:
@@ -63,7 +75,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [512, 60.0]
+    coordinate: [232, 24.0]
     rotation: 0
     state: enabled
 - name: analog_wfm_rcv_0
@@ -72,7 +84,7 @@ blocks:
     affinity: ''
     alias: ''
     audio_decimation: '12'
-    comment: ''
+    comment: 192000 / 12 = 16000
     maxoutbuf: '0'
     minoutbuf: '0'
     quad_rate: 16000*12
@@ -80,7 +92,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [848, 260.0]
+    coordinate: [560, 176.0]
     rotation: 0
     state: true
 - name: audio_sink_0
@@ -97,7 +109,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1064, 268.0]
+    coordinate: [752, 184.0]
     rotation: 0
     state: true
 - name: qtgui_freq_sink_x_0
@@ -131,7 +143,7 @@ blocks:
     color9: '"dark green"'
     comment: ''
     ctrlpanel: 'False'
-    fc: freq
+    fc: '0'
     fftsize: '1024'
     freqhalf: 'True'
     grid: 'False'
@@ -178,8 +190,8 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [488, 340.0]
-    rotation: 0
+    coordinate: [56, 320.0]
+    rotation: 180
     state: true
 - name: qtgui_time_sink_x_0
   id: qtgui_time_sink_x
@@ -275,7 +287,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [488, 164.0]
+    coordinate: [352, 320.0]
     rotation: 0
     state: true
 - name: rational_resampler_xxx_0
@@ -283,7 +295,7 @@ blocks:
   parameters:
     affinity: ''
     alias: ''
-    comment: ''
+    comment: 2M * 12 / 125 = 192000
     decim: '125'
     fbw: '0'
     interp: '12'
@@ -295,7 +307,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [640, 244.0]
+    coordinate: [368, 160.0]
     rotation: 0
     state: true
 - name: uhd_usrp_source_0
@@ -303,7 +315,7 @@ blocks:
   parameters:
     affinity: ''
     alias: ''
-    ant0: '"TX/RX"'
+    ant0: '"RX2"'
     ant1: '"RX2"'
     ant10: '"RX2"'
     ant11: '"RX2"'
@@ -473,7 +485,7 @@ blocks:
     dc_offs_enb7: default
     dc_offs_enb8: default
     dc_offs_enb9: default
-    dev_addr: type=b200
+    dev_addr: serial = 324DD18
     dev_args: '""'
     gain0: '0'
     gain1: '0'
@@ -731,7 +743,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [216, 228.0]
+    coordinate: [64, 152.0]
     rotation: 0
     state: true
 
@@ -744,3 +756,4 @@ connections:
 
 metadata:
   file_format: 1
+  grc_version: 3.10.9.2
